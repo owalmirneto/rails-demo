@@ -12,8 +12,12 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+    <section class="flex min-h-screen items-center justify-center bg-red-800 text-red-400">
+      <section class="flex flex-col items-center">
+        <main class="container mx-auto mt-28 px-5 flex">
+          <%= yield %>
+        </main>
+      </section>
+    </section>
   </body>
 </html>

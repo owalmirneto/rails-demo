@@ -4,7 +4,8 @@ ruby "3.2.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
-
+# https://github.com/svenfuchs/rails-i18n#configuration
+gem "rails-i18n", "~> 7.0", ">= 7.0.8"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 
@@ -45,6 +46,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  # https://github.com/bkeepers/dotenv#rails
+  gem "dotenv-rails", "~> 2.8", ">= 2.8.1"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 end
@@ -58,5 +61,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-end
 
+  # https://github.com/railsjazz/rails_live_reload#usage
+  gem "rails_live_reload", "~> 0.3.5"
+end
