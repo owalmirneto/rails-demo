@@ -13,3 +13,16 @@ services:
       - postgres
     ports:
       - "3000:3000"
+
+  postgres:
+    image: postgres:16.1-alpine
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./tmp/postgresql-data:/var/lib/postgresql/data
