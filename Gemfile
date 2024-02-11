@@ -48,6 +48,8 @@ gem "bootsnap", require: false
 group :development, :test do
   # https://github.com/bkeepers/dotenv#rails
   gem "dotenv-rails", "~> 2.8", ">= 2.8.1"
+  # https://github.com/presidentbeef/brakeman
+  gem "brakeman", "~> 6.1", ">= 6.1.2"
   # https://github.com/standardrb/standard#usage
   gem "standard", "~> 1.33"
   # https://github.com/standardrb/standard-rails#usage

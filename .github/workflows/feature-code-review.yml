@@ -5,6 +5,29 @@ on:
     branches: [main]
 
 jobs:
+  brakeman:
+    name: Brakeman
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler: default
+          ruby-version: 3.2.3
+          bundler-cache: true
+
+      - name: Verify ruby version
+        run: ruby --version
+
+      - name: brakeman
+        uses: reviewdog/action-brakeman@v2
+        with:
+          brakeman_version: 6.1.2
+
   code-style:
     name: Check code style
     runs-on: ubuntu-22.04
