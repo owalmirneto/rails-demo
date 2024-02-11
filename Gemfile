@@ -48,6 +48,10 @@ gem "bootsnap", require: false
 group :development, :test do
   # https://github.com/bkeepers/dotenv#rails
   gem "dotenv-rails", "~> 2.8", ">= 2.8.1"
+  # https://github.com/standardrb/standard#usage
+  gem "standard", "~> 1.33"
+  # https://github.com/standardrb/standard-rails#usage
+  gem "standard-rails", "~> 1.0"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 end
