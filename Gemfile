@@ -48,12 +48,20 @@ gem "bootsnap", require: false
 group :development, :test do
   # https://github.com/bkeepers/dotenv#rails
   gem "dotenv-rails", "~> 2.8", ">= 2.8.1"
+  # https://github.com/presidentbeef/brakeman
+  gem "brakeman", "~> 6.1", ">= 6.1.2"
   # https://github.com/standardrb/standard#usage
   gem "standard", "~> 1.33"
   # https://github.com/standardrb/standard-rails#usage
   gem "standard-rails", "~> 1.0"
   # https://github.com/Shopify/erb-lint#installation
   gem "erb_lint", "~> 0.5.0"
+  # https://github.com/thoughtbot/factory_bot_rails
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.3"
+  # https://github.com/stympy/faker
+  gem "faker", "~> 3.2", ">= 3.2.3"
+  # https://github.com/thoughtbot/shoulda-matchers
+  gem "shoulda-matchers", "~> 6.1"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
 end
@@ -70,4 +78,19 @@ group :development do
 
   # https://github.com/railsjazz/rails_live_reload#usage
   gem "rails_live_reload", "~> 0.3.5"
+end
+
+group :test do
+  # https://github.com/rspec/rspec-rails#installation
+  gem "rspec-rails", "~> 6.1", ">= 6.1.1"
+  # https://github.com/DatabaseCleaner/database_cleaner
+  gem "database_cleaner", "~> 2.0", ">= 2.0.2"
+  # https://github.com/teamcapybara/capybara#setup
+  gem "capybara", "~> 3.40"
+  # https://github.com/SeleniumHQ/selenium/tree/trunk/rb#install
+  gem "selenium-webdriver", "~> 4.17"
+  # https://github.com/simplecov-ruby/simplecov#getting-started
+  gem "simplecov", "~> 0.22.0"
+  # https://github.com/vicentllongo/simplecov-json#usage
+  gem "simplecov-json", "~> 0.2.3"
 end
