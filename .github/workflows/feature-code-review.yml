@@ -1,0 +1,36 @@
+name: Feature code review
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  code-style:
+    name: Check code style
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler: default
+          ruby-version: 3.2.3
+          bundler-cache: true
+
+      - name: Verify ruby version
+        run: ruby --version
+
+      - name: Install Bundler
+        run: gem install bundler -v 2.5.5
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Run Standard Ruby
+        run: bin/standardrb
+
+      - name: Run ERB Lint
+        run: bin/erblint app --format compact
