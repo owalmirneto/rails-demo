@@ -12,4 +12,11 @@
     "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
     "editor.formatOnSave": true
   },
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "ruby": "html"
+  },
+  "files.associations": {
+    "*.html.erb": "erb",
+  },
 }
