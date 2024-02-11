@@ -52,6 +52,8 @@ group :development, :test do
   gem "standard", "~> 1.33"
   # https://github.com/standardrb/standard-rails#usage
   gem "standard-rails", "~> 1.0"
+  # https://github.com/Shopify/erb-lint#installation
+  gem "erb_lint", "~> 0.5.0"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
 end

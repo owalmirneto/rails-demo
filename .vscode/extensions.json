@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "aliariff.vscode-erb-beautify",
     "testdouble.vscode-standard-ruby"
   ]
 }
