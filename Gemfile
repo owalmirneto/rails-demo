@@ -94,3 +94,4 @@ group :test do
   # https://github.com/vicentllongo/simplecov-json#usage
   gem "simplecov-json", "~> 0.2.3"
 end
+gem "avo", ">= 3.2"
