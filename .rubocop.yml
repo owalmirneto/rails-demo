@@ -1,5 +1,8 @@
 require:
   - rubocop-rails
+  - rubocop-factory_bot
+  - rubocop-capybara
+  - rubocop-rspec
 
 inherit_gem:
   standard: config/base.yml

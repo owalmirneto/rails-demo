@@ -54,6 +54,12 @@ group :development, :test do
   gem "standard", "~> 1.33"
   # https://github.com/standardrb/standard-rails#usage
   gem "standard-rails", "~> 1.0"
+  # https://github.com/rubocop/rubocop-rspec#usage
+  gem "rubocop-rspec", "~> 2.26", ">= 2.26.1"
+  # https://github.com/rubocop/rubocop-capybara#usage
+  gem "rubocop-capybara", "~> 2.20"
+  # https://github.com/rubocop/rubocop-factory_bot#usage
+  gem "rubocop-factory_bot", "~> 2.25", ">= 2.25.1"
   # https://github.com/Shopify/erb-lint#installation
   gem "erb_lint", "~> 0.5.0"
   # https://github.com/thoughtbot/factory_bot_rails
