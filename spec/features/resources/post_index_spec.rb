@@ -2,7 +2,7 @@
 
 describe "Listing posts on Avo" do
   before do
-    Post.create!(title: "First post!")
+    create(:post)
 
     visit("/avo/resources/posts")
   end
