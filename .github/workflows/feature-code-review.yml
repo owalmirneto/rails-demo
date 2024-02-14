@@ -52,8 +52,8 @@ jobs:
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
 
-      - name: Run Standard Ruby
-        run: bin/standardrb
+      - name: Run RuboCop Linter
+        run: bin/rubocop
 
       - name: Run ERB Lint
         run: bin/erblint app --format compact
