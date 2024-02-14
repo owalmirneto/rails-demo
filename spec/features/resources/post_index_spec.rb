@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 describe "Listing posts on Avo" do
-  let!(:setup) { Post.create!(title: "First post!") }
+  before do
+    create(:post)
 
-  before { visit("/avo/resources/posts") }
+    visit("/avo/resources/posts")
+  end
 
   it { expect(page).to have_http_status(:success) }
   it { expect(page).to have_css(".text-2xl", text: "Posts") }
