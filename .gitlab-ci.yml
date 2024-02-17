@@ -1,0 +1,16 @@
+image: registry.gitlab.com/owalmirneto/rails-demo:latest
+
+packaging:
+  stage: deploy
+  only: [main]
+  image: docker:stable
+
+  services:
+    - docker:dind
+
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+    - LATEST_IMAGE_TAG="$CI_REGISTRY_IMAGE:latest"
+    - docker pull $LATEST_IMAGE_TAG || true
+    - docker build --cache-from $LATEST_IMAGE_TAG -t $LATEST_IMAGE_TAG .
+    - docker push $LATEST_IMAGE_TAG
