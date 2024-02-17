@@ -12,5 +12,7 @@ resource "aws_instance" "demo_instance" {
   instance_type = local.instance_type
   key_name      = aws_key_pair.demo_ssh_key.key_name
 
+  vpc_security_group_ids = [aws_security_group.access_ssh.id]
+
   tags = local.instance_tags
 }
