@@ -1,0 +1,31 @@
+# sudo apt update -y
+- name: Update apt packages
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+    cache_valid_time: 3600
+  tags:
+    - system
+
+# sudo apt upgrade -y
+- name: Upgrade all packages on servers
+  apt:
+    upgrade: dist
+    force_apt_get: yes
+    cache_valid_time: 3600
+  tags:
+    - system
+
+# sudo apt autoclean
+- name: Remove useless apt packages from the cache
+  apt:
+    autoclean: yes
+  tags:
+    - system
+
+# sudo apt autoremove
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
+  tags:
+    - system
