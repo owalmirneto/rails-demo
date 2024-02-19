@@ -2,7 +2,7 @@ locals {
   instance_ami  = "ami-0c7217cdde317cfec"
   instance_type = "t2.micro"
   instance_tags = {
-    Name    = "Ruby on Rails"
+    Name    = "Ruby Demo"
     Project = "Ubuntu for Rails Demo"
   }
 }
