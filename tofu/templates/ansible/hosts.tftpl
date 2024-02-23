@@ -1,0 +1,8 @@
+[webserver]
+%{ for webserver in webservers ~}
+${webserver}
+%{ endfor ~}
+
+[all]
+[all:vars]
+ansible_user=ubuntu

@@ -1,0 +1,8 @@
+# sudo usermod -aG docker $USER
+- name: Allow defined user to use docker
+  user:
+    name: "{{ansible_user}}"
+    shell: /bin/bash
+    group: "{{ansible_user}}"
+    groups: docker, sudo
+    state: present
