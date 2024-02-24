@@ -1,0 +1,25 @@
+service: rails-demo
+
+image: owalmirneto/rails-demo
+
+servers:
+%{ for server in servers ~}
+  - ${server}
+%{ endfor ~}
+
+registry:
+  server: registry.gitlab.com
+  username:
+    - GITLAB_REGISTRY_USERNAME
+  password:
+    - GITLAB_REGISTRY_PASSWORD
+
+env:
+  clear:
+    APP_NAME: RailsDemo
+  secret:
+    - RAILS_MASTER_KEY
+    - RAILS_DEMO_DATABASE_URL
+
+ssh:
+  user: ubuntu

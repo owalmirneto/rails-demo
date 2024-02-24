@@ -84,6 +84,8 @@ group :development do
 
   # https://github.com/railsjazz/rails_live_reload#usage
   gem "rails_live_reload", "~> 0.3.5"
+  # https://kamal-deploy.org/docs/commands
+  gem "kamal", "~> 1.3"
 end
 
 group :test do

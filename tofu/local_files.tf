@@ -4,3 +4,10 @@ resource "local_file" "ansible_inventory" {
     webservers = [aws_instance.demo_instance.public_ip]
   })
 }
+
+resource "local_file" "kamal_config" {
+  filename = "../config/deploy.yml"
+  content = templatefile("templates/config/deploy.tftpl", {
+    servers = [aws_instance.demo_instance.public_ip]
+  })
+}
