@@ -102,4 +102,10 @@ group :test do
   # https://github.com/vicentllongo/simplecov-json#usage
   gem "simplecov-json", "~> 0.2.3"
 end
+
+# https://docs.avohq.io/3.0/installation.html
 gem "avo", ">= 3.2"
+# https://github.com/heartcombo/devise#getting-started
+gem "devise", "~> 4.9", ">= 4.9.3"
+# https://github.com/tigrish/devise-i18n#customizing-views
+gem "devise-i18n", "~> 1.12"
