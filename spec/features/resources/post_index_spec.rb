@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 describe "Listing posts on Avo" do
+  include_context "when user logged"
+
   before do
     create(:post)
 
