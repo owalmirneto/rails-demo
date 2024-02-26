@@ -70,6 +70,7 @@ jobs:
       DATABASE_PASSWORD: postgres
       DATABASE_NAME: rails_test
       DATABASE_URL: postgres://postgres:postgres@localhost:5432/rails_test
+      RAILS_MASTER_KEY: ${{secrets.RAILS_MASTER_KEY}}
 
     services:
       db:
