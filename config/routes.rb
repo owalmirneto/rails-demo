@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
 
+  devise_for :users
+
   mount Avo::Engine, at: Avo.configuration.root_path
 end
