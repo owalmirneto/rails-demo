@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3"
+gem "rails", "~> 7.1", ">= 7.1.3.2"
 # https://github.com/svenfuchs/rails-i18n#configuration
 gem "rails-i18n", "~> 7.0", ">= 7.0.8"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
