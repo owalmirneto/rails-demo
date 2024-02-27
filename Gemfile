@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.2.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3"
+gem "rails", "~> 7.1", ">= 7.1.3.2"
 # https://github.com/svenfuchs/rails-i18n#configuration
 gem "rails-i18n", "~> 7.0", ">= 7.0.8"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
@@ -109,3 +109,5 @@ gem "avo", ">= 3.2"
 gem "devise", "~> 4.9", ">= 4.9.3"
 # https://github.com/tigrish/devise-i18n#customizing-views
 gem "devise-i18n", "~> 1.12"
+# https://github.com/aws/aws-sdk-ruby#configuration
+gem "aws-sdk-s3", "~> 1.143"
