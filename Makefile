@@ -23,3 +23,6 @@ tofu-apply:
 
 tofu-destroy:
 	cd tofu && tofu destroy
+
+tofu-fmt:
+	cd tofu && tofu fmt
