@@ -109,3 +109,5 @@ gem "avo", ">= 3.2"
 gem "devise", "~> 4.9", ">= 4.9.3"
 # https://github.com/tigrish/devise-i18n#customizing-views
 gem "devise-i18n", "~> 1.12"
+# https://github.com/aws/aws-sdk-ruby#configuration
+gem "aws-sdk-s3", "~> 1.143"
